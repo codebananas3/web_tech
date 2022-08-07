@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    font-size: 23px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
+
+#first {
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+#extra1 {
+    text-align: justify;
+}
+
+.course {
+    display: flex;
+    width: 100%;
+}
+
+.course .image1 {
+    width: 33%;
+    background-image: url(https://www.statnews.com/wp-content/uploads/2020/07/topic-meta-image-biotech-1024x576.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.course .image1 .cse {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.course .image2 {
+    width: 33%;
+    background-image: url(https://karunya.edu/sites/default/files/img/site/front/academics.jpg.pagespeed.ce.sB8U5d5hQE.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.course .image2 .lib {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 250px;
+}
+
+.course .image3 {
+    width: 33%;
+    background-image: url(https://ca-times.brightspotcdn.com/dims4/default/5b43b2a/2147483647/strip/true/crop/2508x1672+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F36%2F86%2F03e7af3844678ceffc8e2dcdac7f%2Fviacyte-viewingcells.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.course .image3 .bio {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.campus {
+    display: flex;
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+.campus .head1 {
+    margin-left:50px ;
+}
+
+.campus .mainp {
+    margin-left: -130px;
+    width: 35%;
+    text-align: justify;
+}
+
+.imagel2 {
+    margin-left: 120px;
+    width: 620px;
+    height: 300px;
+}
+
+.last {
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.last .signin {
+    background-color: white;
+}
+
+.last h2 {
+    display: inline;    
+}
+
+.last .paraf {
+    margin-top: 25px;
+    margin-right: 25px;
+    text-align: justify;
+}
+
+.last .jfinal {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.last .signin .image4 {
+    background-image: url(https://picjumbo.com/wp-content/uploads/green-fields-with-wild-trees-2210x1473.jpg);
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.last .signin .image4 form input[type=text]{
+    width: 50%;
+    padding: 2%;
+    margin: 15px;
+    border: 2px blue;
+    border-radius: 4px;
+    font-size: 1.rem;
+}
+
+.last .signin .image4 form input[type=password]{
+    width: 50%;
+    padding: 2%;
+    margin: 15px;
+    border: 2px blue;
+    border-radius: 4px;
+    font-size: 1.rem;
+}
+
+.last .signin .image4 form input[type=submit]{
+    width: 50%;
+    padding: 2%;
+    margin: 15px;
+    border: 2px blue;
+    border-radius: 4px;
+}
+
+.last .signin .image4 form form label{
+    width: 50%;
+    padding: 2%;
+    margin: 10px;
+    border-radius: 4px;
+}
