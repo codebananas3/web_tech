@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#div_one {
+    background-color: lightskyblue;
+}
+
+#pri_text {
+    margin-left: 5%;        
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#sec_text {
+    margin-left: 5%;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 50%;
+    white-space: nowrap;
+}
+
+#weight {
+    margin-left: 2%;
+}
+
+#result {
+    font-size: 70px;
+}
+
+#i1 {
+    text-align: center;
+}
+
+#i2 {
+    text-align: center;
+}

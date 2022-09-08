@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="Experiment_5.css" />
+    <script>
+      function calcs() {
+        var var1 = document.getElementById("i1").value;
+        var var2 = document.getElementById("i2").value;
+        var sum1 = (var1 / (var2 * var2)) * 10000;
+        var sum = sum1.toFixed(1);
+        if (sum < 18) {
+          messa = "Underweight";
+        } else if (sum < 25) {
+          messa = "Normal";
+        } else if (sum < 30) {
+          messa = "Overweight";
+        } else {
+          messa = "Obese";
+        }
+        document.getElementById("result").innerHTML = sum;
+        document.getElementById("message").innerHTML = messa;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div_one">
+      <br />
+      <div id="pri_text">Body mass index (BMI)</div>
+      <div id="sec_text">A measure of body fats in adults</div>
+      <br />
+    </div>
+    <br />
+    <div id="weight">
+      <div>Weight</div>
+      <div>
+        <input align="center" type="text" id="i1" size="35px" /> kg<br /><br />
+      </div>
+      <div>Height</div>
+      <div>
+        <input
+          align="center"
+          type="text"
+          id="i2"
+          size="35px"
+          onkeyup="calcs()"
+        />
+        cm<br /><br />
+      </div>
+      <div align="right" id="result" style="color: blue" />
+      <div id="message" style="color: blue" />
+    </div>
+  </body>
+</html>
