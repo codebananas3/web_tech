@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="exp_7.css" rel="stylesheet" />
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("control", function ($scope) {
+        $scope.calcl = function () {
+          var day = parseInt($scope.day);
+          var mon = parseInt($scope.mon);
+          var yrs = parseInt($scope.yrs);
+          if (11 - day < 0) {
+            mon -= 1;
+            day += 30;
+          }
+          if (10 - mon < 0) {
+            yrs -= 1;
+            mon += 12;
+          }
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="myApp" ng-controller="control">
+    <h2 class="header0">Age Calculator</h2>
+    <h2 class="header1">Enter the Birth Date</h2>
+    <div class="bosy1">
+      Day: <br />
+      <input type="number" class="inpuits" ng-model="day" /><br /><br />
+      Month: <br />
+      <input type="number" class="inpuits" ng-model="mon" /><br /><br />
+      Year: <br />
+      <input type="number" class="inpuits" ng-model="yrs" /><br /><br />
+    </div>
+
+    <button ng-click="calcl()" class="buttonm">Find age</button>
+    <div class="juan">
+      <div ng-bind="data"></div>
+      <hr />
+      <hr />
+      <br />
+      Age Details<br />
+    </div>
+    <div class="bosy3">
+      <h3>{{2022-yrs}} Years {{10-mon}} Months {{11-day}} Days</h3>
+    </div>
+  </body>
+</html>
