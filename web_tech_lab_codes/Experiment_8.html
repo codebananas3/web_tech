@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="Exp8.css">
+    <script>
+      var app = angular.module("myApp", []); //module
+      app.controller("control", function ($scope) {
+        $scope.infos = function () {
+          var ename = $scope.ename;
+          var eid = $scope.eid;
+          var edate = $scope.edate;
+          var esalr = $scope.esalr;
+          var ehous= $scope.ehous;
+          var edear = $scope.edear;
+        };
+      });
+    </script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="control">
+    <h2 class="header0">Employee payroll calculator</h2>
+    <div class="bosy1">
+      Employee Name: <br />
+      <input type="text" class="inpuits" ng-model="ename" /><br /><br />
+      Emp ID: <br />
+      <input type="text" class="inpuits" ng-model="eid" /><br /><br />
+      Salary Date: <br />
+      <input type="date" class="inpuits" ng-model="edate" /><br /><br />
+      Basic Salary: <br />
+      <input type="number" class="inpuits" ng-model="esalr" /><br /><br />
+      House Rent Allowance (HRA): <br />
+      <input type="number" class="inpuits" ng-model="ehous" /><br /><br />
+      Dearness Allowance (DRA): <br />
+      <input type="number" class="inpuits" ng-model="edear" /><br /><br />
+    </div>
+    <button ng-click="infos()" class="buttonm">Calculate Salary</button>
+    <div class="juan">
+      <div ng-bind="data"></div>
+      <hr />
+      Salary Details
+    </div>
+    <!-- <div class="bosy3">
+      <span>Employee Name {{ename}}</span><br>
+      <span>EmpID {{eid}}</span><br>
+      <span>Salary Date {{edate}}</span><br>
+      <span>Gross Salary {{esalr}}</span><br>
+      <span>Net Salary {{ehous}}</span><br>
+      <span>Tax Deducted {{edear}}</span><br>
+    </div> -->
+    <table class="kiko">
+      <tr>
+        <td>
+          Employee Name 
+        </td>
+        <td class="kikaa">
+          {{ename}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          EmpID      </td>
+          <td class="kikaa">
+            {{eid}}
+          </td>
+      </tr>
+      <tr>
+        <td>
+          Salary Date </td>
+          <td class="kikaa">
+            {{edate | date}}
+          </td>
+      </tr>
+      <tr>
+        <td>
+          Gross Salary </td>
+          <td class="kikaa">
+            {{esalr}}
+          </td>
+      </tr>
+      <tr>
+        <td>
+          Net Salary </td>
+          <td class="kikaa">
+            {{ehous}}
+          </td>
+      </tr>
+      <tr>
+        
+      <td>
+        Tax Deducted</td>
+        <td class="kikaa">
+          {{edear}}
+        </td>
+      </tr>   
+    </table>
+  </body>
+</html>
+
+</html>
