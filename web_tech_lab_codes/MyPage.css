@@ -1,0 +1,245 @@
+* {
+    background-color: #231122;
+}
+
+.main1 {
+    font-size: 110px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-left: 110px;
+    margin-top: -10px;
+    font-weight: 500;
+    color: #fffe55;
+    display: flex;
+}
+
+.submain1 {
+    font-size: 20px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-left: 110px;
+    margin-top: 130px;
+    font-weight: 500;
+    color: #fffe55;
+    display: flex;
+}
+
+.myImage {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin-top: -400px;
+    margin-left: 700px;
+    border-radius: 50%;
+    animation: fadeIn 1.3s;
+}
+
+.lnklink {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-weight: 300;
+    margin-left: 150px;
+}
+
+.lnklink:link, .lnklink:visited {
+    color: #fffe55;
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    height: 42px;
+
+    margin-left: 100px;
+    margin-top: -20px;
+    padding: 7px;
+
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.lnklink:hover {
+    color: #221122;
+    background-color: #fffe55;
+    display: block;
+    width: 300px;
+    height: 42px;
+
+    margin-left: 100px;
+    margin-top: -20px;
+    padding: 7px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+.lnklink:active {
+    color: rgb(117, 150, 0);
+    background-color: #ffff8e;
+    display: block;
+    width: 300px;
+    height: 42px;
+    opacity: 0.7;
+
+    margin-left: 100px;
+    margin-top: -20px;
+    padding: 7px;
+
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+.hr1 {
+    border-top: 3px solid yellow;
+    width: 800px;
+}
+
+.hr2 {
+    border-top: 3px solid yellow;
+    width: 800px;
+}
+
+.head1 {
+    font-size: 45px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-left: 250px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #fffe55;
+    display: flex;
+}
+
+.body1 {
+    font-size: 18px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-left: 530px;
+    margin-top: -60px;
+    font-weight: 500;
+    color: #fffe55;
+}
+
+.body2 {
+    font-size: 28px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-left: 555px;
+    margin-top: -55px;
+    font-weight: 500;
+    color: #fffe55;
+}
+
+img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.downl {
+    font-size: 28px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    margin-top: -55px;
+    font-weight: 500;
+    color: #fffe55;
+    text-align: center;
+}
+
+.stuff {
+    align-self: center;
+}
+
+.lnklink2 {
+    color: #fffe55;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-weight: 350;
+    margin-left: 400px;
+    text-align: center;
+}
+
+.lnklink2:link, .lnklink:visited {
+    color: #fffe55;
+    text-decoration: none;
+    display: block;
+    width: 400px;
+    height: 42px;
+
+    margin-left: 400px;
+    margin-top: -20px;
+    padding: 7px;
+
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.lnklink2:hover {
+    color: #221122;
+    background-color: #fffe55;
+    display: block;
+    width: 400px;
+    height: 42px;
+
+    margin-left: 400px;
+    margin-top: -20px;
+    padding: 7px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+.lnklink2:active {
+    color: rgb(117, 150, 0);
+    background-color: #ffff8e;
+    display: block;
+    width: 400px;
+    height: 42px;
+    opacity: 0.7;
+
+    margin-left: 400px;
+    margin-top: -20px;
+    padding: 7px;
+
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+.blac {
+    background-color: #fffe55;
+    transition: background-color 0.5s ease;
+    color: #221122;
+    display: block;
+    width: 99%;
+    text-align: center;
+    font-size: 110px;
+
+    margin-top: -20px;
+    padding: 7px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
