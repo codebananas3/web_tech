@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="exp9.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("myapp", []);
+      app.controller("mycontrol", function ($scope) {
+        $scope.passpattern = /^[a-zA-Z0-9][5,10]$/;
+        $scope.pawspattern = /^[0-9]{5}[-][0-9]{7}[-][0-9]{1}$/;
+      });
+    </script>
+  </head>
+  <body ng-app="myapp" ng-controller="mycontrol">
+    <h1 class="head1">User registration form</h1>
+    <br />
+    <div>
+      <form name="myform">
+        <span class="boxf">Name</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="text"
+          ng-model="name"
+          name="myname"
+          required
+        />
+        <span
+          style="color: red"
+          ng-show="myform.myname.$dirty && myform.myname.$error.required"
+          >Name is required!</span
+        ><br /><br />
+        <span class="boxf">Password</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="text"
+          ng-model="pass"
+          name="mypass"
+          required
+        />
+        <span
+          style="color: red"
+          ng-show="myform.mypass.$dirty && myform.mypass.$error.required"
+          >Password is required!
+        </span>
+        <span
+          style="color: red"
+          ng-show="myform.mypass.$dirty && myform.mypass.$error.passpattern"
+          >Password is required! </span
+        ><br /><br />
+        <span class="boxf">Age</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="integer"
+          ng-model="age"
+          name="myage"
+          required
+        />
+        <span
+          style="color: red"
+          ng-show="myform.myage.$dirty && myform.myage.$error.required"
+          >Age is required!
+        </span>
+        <span
+          style="color: red"
+          ng-show="myform.myage.$dirty && myform.myage.$error.age"
+          >Age format is incorrect!
+        </span>
+        <br /><br />
+        <span class="boxf">Mobile number</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="text"
+          ng-model="mobnum"
+          name="mynum"
+          required
+        />
+        <span
+          style="color: red"
+          ng-show="myform.mynum.$dirty && myform.mynum.$error.required"
+          >Phone number is required!
+        </span>
+        <span
+          style="color: red"
+          ng-show="myform.mynum.$dirty && myform.mynum.$error.pawspattern"
+          >Phone number is incorrect!
+        </span>
+        <br /><br />
+        <span class="boxf">Email</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="email"
+          ng-model="email"
+          name="myemail"
+          required
+        />
+        <span
+          style="color: red"
+          ng-show="myform.myemail.$dirty && myform.myemail.$error.required"
+          >Email is required!
+        </span>
+        <span
+          style="color: red"
+          ng-show="myform.myemail.$dirty && myform.myemail.$error.email"
+          >Email format is incorrect!
+        </span>
+        <br /><br />
+        <span class="boxf">Gender</span><span style="color: red">*</span>
+        <input
+          class="boxa"
+          type="radio"
+          ng-model="mgem"
+          name="mygen"
+          required
+        />
+        <label for="male">Male</label>
+        <input
+          class="boxa"
+          type="radio"
+          ng-model="fgem"
+          name="mygen"
+          required
+        />
+        <label for="Female">Female</label>
+        <span
+          style="color: red"
+          ng-show="myform.mygen.$dirty && myform.mygen$error.required"
+          >Phone number is required! </span
+        ><br /><br />
+        <label class="boxf" for="states">State:</label
+        ><span style="color: red">*</span>
+        <select class="boxa" name="state" id="states">
+          <option value="TN">TamilNadu</option>
+          <option value="KL">Kerala</option>
+          <option value="KN">Karnataka</option>
+          <option value="AP">Andhra Pradesh</option>
+        </select>
+      </form>
+      <br /><br /><br />
+      <button class="bt1" style="margin-left: 32%">Submit</button>
+    </div>
+  </body>
+</html>
