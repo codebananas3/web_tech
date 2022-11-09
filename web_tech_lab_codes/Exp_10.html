@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("myapp", []);
+      app.controller("mycontrol", function ($scope) {
+        $scope.passpattern = /^[a-zA-Z0-9]{8,}$/;
+      });
+    </script>
+  </head>
+  <body
+    ng-app="myapp"
+    ng-controller="mycontrol"
+    style="color: blue; text-align: center"
+  >
+    <h1 style="color: blue; text-align: center">User Registration Form</h1>
+    <form action="/server" method="POST" name="myform" style="color: blue">
+      Name<span style="color: red">*</span>&nbsp;<input
+        type="text"
+        name="username"
+        ng-model="name"
+        required
+      />
+      <span
+        ng-show="myform.username.$dirty && myform.username.$error.required"
+        style="color: red"
+        >Name is required</span
+      >
+      <br /><br />
+
+      Password:<span style="color: red">*</span>&nbsp;<input
+        type="password"
+        name="password"
+        ng-model="pass"
+        required
+        ng-pattern="passpattern"
+      />
+      <span
+        ng-show="myform.password.$dirty && myform.password.$error.required"
+        style="color: red"
+        >Password is required</span
+      >
+      <span
+        ng-show="myform.password.$dirty && myform.password.$error.pattern"
+        style="color: red"
+        >Incorrect Password Format
+      </span>
+      <br /><br />
+
+      Number:<span style="color: red">*</span>&nbsp;<input
+        type="tel"
+        name="phone"
+        ng-model="mynum"
+        required
+      />
+      <span
+        ng-show="myform.phone.$dirty && myform.phone.$error.required"
+        style="color: red"
+        >Password is required</span
+      >
+      <span
+        ng-show="myform.phone.$dirty && myform.phone.$error.pattern"
+        style="color: red"
+        >Incorrect Number Format
+      </span>
+      <br /><br />
+
+      Age<span style="color: red">*</span>&nbsp;<input
+        type="text"
+        name="age"
+        ng-model="age"
+        required
+      />
+      <span
+        ng-show="myform.age.$dirty && myform.age.$error.required"
+        style="color: red"
+        >Age is required</span
+      >
+      <br /><br />
+
+      Email:<span style="color: red">*</span>&nbsp;<input
+        type="email"
+        name="email"
+        ng-model="email"
+      />
+      <span
+        ng-show="myform.email.$dirty && myform.email.$error.required"
+        style="color: red"
+        >Email is required</span
+      >
+      <span
+        ng-show="myform.email.$dirty && myform.email.$error.email"
+        style="color: red"
+        >Email format error</span
+      >
+      <br /><br />
+
+      Gender:<span style="color: red">*</span>&nbsp;
+      <input
+        type="radio"
+        id="male"
+        value="male"
+        name="gender"
+        ng-model="gender"
+      />
+      <label for="male">male</label>
+      <input
+        type="radio"
+        id="female"
+        value="female"
+        name="gender"
+        ng-model="gender"
+      />
+      <label for="female">female</label
+      ><span
+        ng-show="myform.gender.$dirty && myform.gender.$error.required"
+        style="color: red"
+        >Gender is required</span
+      ><br /><br />
+
+      State:<span style="color: red">*</span>&nbsp;
+      <select id="state" name="state" ng-model="state">
+        <option value="kerala">Kerala</option>
+        <option value="west bengal">West Bengal</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="tamil nadu">Tamil Nadu</option></select
+      ><span
+        ng-show="myform.state.$dirty && myform.state.$error.required"
+        style="color: red"
+        >Gender is required</span
+      ><br /><br />
+
+      Skills:<span style="color: red">*</span>&nbsp;
+      <input type="checkbox" id="sk1" name="sk1" value="Python" />
+      <label for="sk1">Python</label>
+      <input type="checkbox" id="sk2" name="sk2" value="Javascript" />
+      <label for="sk2">Javascript</label>
+      <input type="checkbox" id="sk3" name="sk3" value="C++" />
+      <label for="sk3">C++</label>
+      <br /><br /><button>Submit</button>
+    </form>
+  </body>
+</html>
