@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("myApp", []); //module
+      app.controller("control", function ($scope) {
+        $scope.items = [];
+        $scope.price = [];
+        $scope.addItem = function () {
+          $scope.items.push($scope.itemname);
+          $scope.price.push($scope.itemprice);
+        };
+        $scope.removeItem = function ($index) {
+          $scope.items.splice($index, 1);
+          $scope.price.splice($index, 1);
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="myApp" ng-controller="control">
+    <h1 style="color: blue; text-align: center">Product Inventory System</h1>
+    <div style="color: blue">
+      Enter the Product Name:
+      <input type="text" ng-model="itemname" /><br /><br />
+      Enter Price: <input type="text" ng-model="itemprice" /><br /><br />
+      <button ng-click="addItem()">Add Product</button>
+    </div>
+    <hr />
+    <table border="1" cell cellspacing="0" width="50%">
+      <tr>
+        <th>Sl. No</th>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Remove</th>
+      </tr>
+      <tr style="text-align: center" ng-repeat="x in items">
+        <td>{{$index+1}}</td>
+        <td>{{x}}</td>
+        <td>{{price[$index]}}</td>
+        <td>
+          <button style="background-color: red" ng-click="removeItem($index)">
+            [remove]
+          </button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
